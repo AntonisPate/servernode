@@ -1,9 +1,6 @@
 const task = require('../models/task')
 
 module.exports = {
-    method: async (search = null) => {
-        return search ? await task.find({ _id: search}) : await task.find()
-    },
     create: async (data) => {
         return await task.create({
             title: data.title,

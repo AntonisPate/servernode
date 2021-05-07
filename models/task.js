@@ -4,7 +4,6 @@ var connection = mongoose.createConnection("mongodb://localhost/" +  process.env
 autoIncrement.initialize(connection);
 
 const TaskSchema = new mongoose.Schema({
-    id: { type: Number, incre: true},
     title: { type: String, required: true},
     context: { type: String},
 })
